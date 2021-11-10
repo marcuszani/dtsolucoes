@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Busfacil QRCODE</title>
+    <script src="http://code.jquery.com/jquery-latest.min.js" type="text/javascript"></script>
+</head>
+<body>
+
+    <div id="sistema"></div>
+    <div>
+        <center>
+        <img src="https://chart.googleapis.com/chart?chs=500x500&cht=qr&chl=http://www.dtsolucoes.com.br/" alt="Busfacil">
+    </center>
+    </div>
+    <br>
+
+    
+
+    <script>
+        $(document).ready(function (){
+            if(navigator.userAgent.toLowerCase().indexOf("android") > -1){
+                //window.location.href = 'http://play.google.com/store/apps/details?id=com.truecaller&hl=en';
+                //document.write("Android");
+                document.getElementById("sistema").innerHTML = "<center>Android</center>"
+            }
+            if(navigator.userAgent.toLowerCase().indexOf("iphone") > -1){
+               // window.location.href = 'http://itunes.apple.com/lb/app/truecaller-caller-id-number/id448142450?mt=8';
+                //document.write("IOS");
+                document.getElementById("sistema").innerHTML = "<center>IOS</center>"
+            }
+            if(navigator.userAgent.toLowerCase().indexOf("windows") > -1){
+               // window.location.href = 'http://itunes.apple.com/lb/app/truecaller-caller-id-number/id448142450?mt=8';
+              //document.write("Windows");
+              document.getElementById("sistema").innerHTML = "<center>Windows</center>"
+            }
+
+        });
+    </script>
+
+
+</body>
+</html>
