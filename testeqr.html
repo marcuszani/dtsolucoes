@@ -12,28 +12,31 @@
     <div id="sistema"></div>
     <div>
         <center>
-        <img src="https://chart.googleapis.com/chart?chs=500x500&cht=qr&chl=http://www.dtsolucoes.com.br/testeqr.html" alt="Busfacil">
+        <img id="imagemQR" alt="Busfacil">
     </center>
     </div>
     <br>
 
-    
-
     <script>
+
+        var linkQR = "https://chart.googleapis.com/chart?chs=500x500&cht=qr&chl=";
+
+        var urlAtual = window.location.href;
+
+        document.getElementById("imagemQR").src = linkQR + urlAtual;
+
+
         $(document).ready(function (){
             if(navigator.userAgent.toLowerCase().indexOf("android") > -1){
                 //window.location.href = 'http://play.google.com/store/apps/details?id=com.truecaller&hl=en';
-                //document.write("Android");
                 document.getElementById("sistema").innerHTML = "<center><h1>Android</h1></center><br>"
             }
             if(navigator.userAgent.toLowerCase().indexOf("iphone") > -1){
-               // window.location.href = 'http://itunes.apple.com/lb/app/truecaller-caller-id-number/id448142450?mt=8';
-                //document.write("IOS");
                 document.getElementById("sistema").innerHTML = "<center><h1>IOS</h1></center><br>"
+                window.location.href = 'https://apps.apple.com/br/app/busf%C3%A1cil-mau%C3%A1/id1590533047';
             }
             if(navigator.userAgent.toLowerCase().indexOf("windows") > -1){
                // window.location.href = 'http://itunes.apple.com/lb/app/truecaller-caller-id-number/id448142450?mt=8';
-              //document.write("Windows");
               document.getElementById("sistema").innerHTML = "<center><h1>Windows</h1></center><br>"
             }
 
